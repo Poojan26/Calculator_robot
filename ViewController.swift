@@ -3,8 +3,9 @@
 // Student ID- 301228811
 // Course: MAPD 714
 // In first part UI was created for this application
-// Now in second part, the methods are written for the buttons to perform basic arithmetic operations
-// Date modified: 10/3/2021
+// In second part, the methods are written for the buttons to perform basic arithmetic operations
+// In third part, there are few buttons added in landscape view with methods for their functionality.
+// Date modified: 10/23/2021
 
 import UIKit
 
@@ -52,7 +53,8 @@ class ViewController: UIViewController {
                 
             }
             AnswerLabel.text = text
-            operand1.append(text)
+            //operand1.append(text)
+            print(operand1)
         }
         else{
             if (answer != ""){
@@ -60,6 +62,10 @@ class ViewController: UIViewController {
                 operand1.append(answer)
 
 
+            }
+            else{
+                operand1 = ""
+                operand1.append(text)
             }
             
             print("ELSEEEEEE")
@@ -81,7 +87,7 @@ class ViewController: UIViewController {
             }
             AnswerLabel.text = operand2
             print(operand2, operand1)
-            //operand2.append(text)
+            
         }
     }
     
@@ -142,7 +148,7 @@ class ViewController: UIViewController {
     
     // +/- Button functionality
     @IBAction func OnPiusMinusClick(_ sender: UIButton) {
-        print(AnswerLabel.text!.prefix(1))
+        //print(AnswerLabel.text!.prefix(1))
         var output = negate(a:AnswerLabel.text!)
         AnswerLabel.text = output
         if answer != "" {
@@ -151,6 +157,14 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    // Square function
+    @IBAction func OnSquareClick(_ sender: UIButton) {
+        var output = square(a:AnswerLabel.text!)
+        AnswerLabel.text = output
+    }
+    
+    
     
     // Backspace Button
     @IBAction func OnBackSpace(_ sender: UIButton) {
@@ -250,6 +264,12 @@ class ViewController: UIViewController {
     
     func percentage(a:String) -> String{
         var result: Float = Float(a)! / 100
+        var answer = String(result)
+        return answer
+    }
+    
+    func square(a:String) -> String{
+        var result: Float = Float(a)! * Float(a)!
         var answer = String(result)
         return answer
     }

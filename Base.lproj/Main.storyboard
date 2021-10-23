@@ -469,6 +469,9 @@
                                 <state key="normal" title="x2">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="OnSquareClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8hO-Sr-y5W"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nW-b4-56F">
                                 <rect key="frame" x="158" y="332" width="76" height="47"/>
@@ -549,8 +552,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="record.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="G7v-vc-W8l">
-                                <rect key="frame" x="468" y="98.5" width="40" height="42"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="record.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="G7v-vc-W8l">
+                                <rect key="frame" x="468" y="99" width="40" height="40"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="HMF-6A-oV6"/>
