@@ -480,6 +480,9 @@
                                 <state key="normal" title="π">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="OnPiClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Te6-VN-ztO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwc-Ph-2qg">
                                 <rect key="frame" x="242" y="161.5" width="76" height="45.5"/>
@@ -488,6 +491,9 @@
                                 <state key="normal" title="sin">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="OnTrigClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Yd-8y-Igv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1h-g4-f8F">
                                 <rect key="frame" x="242" y="215" width="76" height="49"/>
@@ -509,6 +515,9 @@
                                         <include reference="HUh-9e-DKe"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="OnTrigClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2v9-Zc-8iR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USo-bw-A9q">
                                 <rect key="frame" x="242" y="277" width="76" height="47"/>
@@ -517,6 +526,9 @@
                                 <state key="normal" title="tan">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="OnTrigClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GVm-f9-KcP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNy-nO-CGV">
                                 <rect key="frame" x="242" y="332" width="76" height="49"/>

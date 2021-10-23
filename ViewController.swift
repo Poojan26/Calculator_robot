@@ -9,6 +9,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     // Variable Declaration
@@ -17,6 +18,7 @@ class ViewController: UIViewController {
     var curr_operator:String = ""
     var answer:String = ""
     var text:String = ""
+    var current_form:String = "Deg"
     
     
     // Answer Label outlet
@@ -119,6 +121,7 @@ class ViewController: UIViewController {
                     AnswerLabel.text = output
                 }
                 
+                
                 answer = ""
                 answer.append(AnswerLabel.text!)
                 operand2 = ""
@@ -164,6 +167,41 @@ class ViewController: UIViewController {
         AnswerLabel.text = output
     }
     
+    
+    // Pi button click
+    @IBAction func OnPiClick(_ sender: UIButton) {
+        print(Double.pi)
+        print(sine(a:AnswerLabel.text!))
+        AnswerLabel.text = ""
+        answer = ""
+        AnswerLabel.text = String(Double.pi)
+        answer.append(AnswerLabel.text!)
+    }
+    
+    // Trigonotmetric Functions
+    @IBAction func OnTrigClick(_ sender: UIButton) {
+        
+        var btn_text = sender.titleLabel!.text!
+        if (btn_text == "sin"){
+            var output = sine(a:AnswerLabel.text!)
+            AnswerLabel.text = output
+        }
+        
+        else if (btn_text == "cos"){
+            var output = cosine(a:AnswerLabel.text!)
+            AnswerLabel.text = output
+            
+        }
+        
+        else if (btn_text == "tan"){
+            var output = tangent(a:AnswerLabel.text!)
+            AnswerLabel.text = output
+            
+        }
+        answer = ""
+        answer.append(AnswerLabel.text!)
+        
+    }
     
     
     // Backspace Button
@@ -273,7 +311,26 @@ class ViewController: UIViewController {
         var answer = String(result)
         return answer
     }
+    
+    func sine(a:String) -> String{
+        var result:Double = sin(Double(a)! * Double.pi/180)
+        var answer = String(result)
+        return answer
+    }
+    
+    func cosine(a:String) -> String{
+        var result:Double = cos(Double(a)! * Double.pi/180)
+        var answer = String(result)
+        return answer
+    }
+    
+    func tangent(a:String) -> String{
+        var result:Double = tan(Double(a)! * Double.pi/180)
+        var answer = String(result)
+        return answer
+    }
 }
+
 
     
 
