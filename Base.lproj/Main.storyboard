@@ -537,6 +537,9 @@
                                 <state key="normal" title="Rad">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="Rad_DegButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QWd-dZ-5S4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoC-rm-tCy">
                                 <rect key="frame" x="359" y="161.5" width="95" height="211.5"/>

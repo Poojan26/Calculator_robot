@@ -171,31 +171,46 @@ class ViewController: UIViewController {
     // Pi button click
     @IBAction func OnPiClick(_ sender: UIButton) {
         print(Double.pi)
-        print(sine(a:AnswerLabel.text!))
         AnswerLabel.text = ""
         answer = ""
         AnswerLabel.text = String(Double.pi)
         answer.append(AnswerLabel.text!)
     }
     
+    // Rad - Deg button
+    @IBAction func Rad_DegButton(_ sender: UIButton) {
+        let button = (sender as AnyObject)
+        if (current_form == "Deg"){
+            button.setTitle("Deg",for: .normal)
+            current_form = "Rad"
+        }
+        else{
+            button.setTitle("Rad",for: .normal)
+            current_form = "Deg"
+        }
+    }
+    
+    
     // Trigonotmetric Functions
     @IBAction func OnTrigClick(_ sender: UIButton) {
         
         var btn_text = sender.titleLabel!.text!
         if (btn_text == "sin"){
-            var output = sine(a:AnswerLabel.text!)
+            var output = sine(a:AnswerLabel.text!,b:current_form)
             AnswerLabel.text = output
         }
         
         else if (btn_text == "cos"){
-            var output = cosine(a:AnswerLabel.text!)
+            var output = cosine(a:AnswerLabel.text!,b:current_form)
             AnswerLabel.text = output
             
         }
         
         else if (btn_text == "tan"){
-            var output = tangent(a:AnswerLabel.text!)
+            
+            var output = tang(a:AnswerLabel.text!,b:current_form)
             AnswerLabel.text = output
+            
             
         }
         answer = ""
@@ -312,22 +327,48 @@ class ViewController: UIViewController {
         return answer
     }
     
-    func sine(a:String) -> String{
-        var result:Double = sin(Double(a)! * Double.pi/180)
-        var answer = String(result)
-        return answer
+    func sine(a:String,b:String) -> String{
+        var answer_2 = ""
+        if (b == "Deg"){
+            var result:Double = sin(Double(a)! * Double.pi/180)
+            answer_2 = String(result)
+        }
+        else{
+            var result:Double = sin(Double(a)!)
+            answer_2 = String(result)
+            
+        }
+        return answer_2
     }
     
-    func cosine(a:String) -> String{
-        var result:Double = cos(Double(a)! * Double.pi/180)
-        var answer = String(result)
-        return answer
+    func cosine(a:String,b:String) -> String{
+        var answer_2 = ""
+        if (b == "Deg"){
+            var result:Double = cos(Double(a)! * Double.pi/180)
+            answer_2 = String(result)
+        }
+        else{
+            var result:Double = cos(Double(a)!)
+            answer_2 = String(result)
+            
+        }
+        return answer_2
     }
     
-    func tangent(a:String) -> String{
-        var result:Double = tan(Double(a)! * Double.pi/180)
-        var answer = String(result)
-        return answer
+    func tang(a:String,b:String) -> String{
+        var answer_2 = ""
+        if (b == "Deg"){
+            var result:Double = tan(Double(a)! * Double.pi/180)
+            answer_2 = String(result)
+            
+        }
+        else{
+            var result:Double = tan(Double(a)!)
+            answer_2 = String(result)
+            
+        }
+       
+        return answer_2
     }
 }
 
